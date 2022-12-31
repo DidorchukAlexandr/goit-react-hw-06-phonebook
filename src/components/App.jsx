@@ -1,16 +1,15 @@
-export const App = () => {
+import FormContacts from "./FormContacts/FormContacts";
+import ContactList from "./ContactList/ContactList";
+import FilterContacts from "./FilterContacts/FilterContacts";
+import { GlobalBox } from "./App.styled";
+
+export default function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <GlobalBox>
+      <h1>Phoneboock</h1>
+      <FormContacts />
+      <FilterContacts textTitel="Find contacts by name" />
+      <ContactList />
+    </GlobalBox>
   );
 };
